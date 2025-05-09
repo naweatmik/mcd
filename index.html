@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주제</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./script/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $(".menu").on("click",function(){
+        $("#menu").css({display:'block'})
+      });
+      $(".close").on("click",function(){
+        $("#menu").css({display:'none'})
+      })
+    })
+  </script>
+  <style>
+    .box{
+      background-color: sandybrown;
+      height: 300px;
+    }
+    .t_hidden{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 1px;
+      height: 1px;
+      display: block;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<h1>aaa</h1>
+
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-3">
+        <div class="box">1</div>
+      </div>
+      <div class="col-3">
+        <div class="box">1</div>
+      </div>
+      <div class="col-3">
+        <div class="box">1</div>
+      </div>
+      <div class="col-3">
+        <div class="box">1</div>
+      </div>
+    </div>
+  </div>
+
+  <h1>
+    <a href="#">
+      <img src="./img/google_logo.svg" alt="logo">
+      <span class="t_hidden">구글</span>
+    </a>
+  </h1>
+
+
+  <style>
+    .title { 
+      font-size: calc( 24px + 10vw );
+    } 
+    body{
+      background-color: #ccc;
+    }
+
+@media (max-width:1200px) { 
+  body{
+    background-color: saddlebrown;
+  }
+}
+
+@media (max-width: 991px) { 
+  body{
+    background-color: red;
+  }
+}
+@media (max-width: 767px) {
+  body{
+    background-color: seagreen;
+  }
+ }
+
+@media (max-width: 575px) { 
+  body{
+    background-color: blue;
+  }
+}
+@media screen and (min-width:1px) and (max-width : 575px) {
+  body{
+    background-color: #000;
+  }
+}
+
+.title{
+  height: fit-content;
+  margin: 0 30px;
+  position: relative;
+}
+.title::before{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 4px;
+  height: 0%;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  background-color: #000;
+  transition: .3s;
+}
+
+.title:hover::before{
+  height: 90%;
+}
+
+#menu{
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9;
+  background-color: #fff;
+  display: none;
+}
+  </style>
+
+  <button class="menu">메뉴</button>
+
+  <div id="menu">
+    <ul>
+      <li>menu-1</li>
+      <li>menu-1</li>
+      <li>menu-1</li>
+      <li>menu-1</li>
+    </ul>
+    <button class="close">닫기</button>
+  </div>
+
+  <section>
+    <h2 class="title">베스트아이템</h2>
+  </section>
+
+  <div>
+    <figure>
+      <picture>
+        <source srcset="./img/j.png" media="(min-width:1200px)">
+        <source srcset="./img/h.webp" media="(min-width:575px)">
+        <source srcset="./img/m.webp" media="(min-width:1px)">
+        <img src="./" alt="아이템1">
+      </picture>
+    </figure>
+  </div>
+
+  
+
+</body>
+</html>

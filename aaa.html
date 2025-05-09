@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    main{
+      width: 100%;
+      height: 100vh;
+      background-color: beige;
+      position: relative;
+      overflow: hidden;
+    }
+    .title_box{
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    .title_box h1{
+      font-size: calc(24px + 10vw);
+    }
+    .title_box a{
+      margin-top: 30px;
+    }
+    main img{
+      display: block;
+      max-width: 600px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      z-index: 1;
+    }
+
+    @media (orientation: landscape){
+      /*  가로모드  : 화면의 너비가 높이보다 큰 경우 */
+      main{
+        background-color: #000;
+      }
+    }
+
+    @media (orientation: portrait) {
+      /*  세로모드 : 화면의 높이가 너비보다 큰 경우  */
+      main{
+        background-color: #ccc;
+      }
+    }
+
+ 
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="title_box">
+      <h1>rkskasdkljsa!</h1>
+      <a href="#">이동</a>
+    </div>
+    <img src="./img/j.png" alt="a/">
+  </main>
+  
+</body>
+</html>
